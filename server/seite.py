@@ -277,8 +277,8 @@ woher sie kommen, wie verlässlich sie sind und wer helfen kann. Er zeigt keine 
 <li><b>Bewusst nicht vorhanden:</b> Sterne, Punkte und Beliebtheitslisten. Ohne echte Nutzung dahinter wären sie erfunden. "Für dich" und "Zuletzt angesehen" bleiben im eigenen Browser.</li></ul></div>
 <div class="abschnitt"><h2>So fragt man den Chat</h2>
 <p>Dieser Katalog hat einen MCP-Server. Das ist eine Schnittstelle, über die ein Chat-Programm wie Claude den Katalog lesen kann.
-In Claude fügst du in den Einstellungen unter Konnektoren einen benutzerdefinierten Konnektor hinzu (je nach Tarif) und trägst die Adresse deines
-Servers ein, die auf <code>/mcp</code> endet. Danach kannst du Fragen wie <i>"Was kostet uns KI pro Abteilung?"</i> stellen.</p>
+In Claude öffnest du Anpassen › Konnektoren, klickst auf das Plus, wählst "Benutzerdefinierten Konnektor hinzufügen" und trägst die Adresse deines
+Servers ein, die auf <code>/mcp</code> endet. Das geht auch im Gratis-Tarif (dort mit einem Konnektor). Claude verbindet sich aus der Cloud von Anthropic, der Server muss also öffentlich erreichbar sein. Danach kannst du Fragen wie <i>"Was kostet uns KI pro Abteilung?"</i> stellen.</p>
 <p>Der Chat soll nur aus dem Katalog antworten, die Karte als Quelle nennen und bei Lücken <i>"Das steht nicht im Katalog."</i> sagen.
 Das haben wir mit Testfragen geprüft, darunter zwei Fallen. Die Testfragen stehen im Repository.</p></div>
 <div class="abschnitt"><h2>Was in der Praxis die Arbeit ist</h2>

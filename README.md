@@ -63,7 +63,8 @@ Der Server selbst braucht die Daten nicht. Er liest nur den Ordner `katalog/`.
 
 1. **Server auf Render einrichten:** Repository mit Render verbinden, "New → Blueprint", `render.yaml` wird erkannt (Gratis-Tarif, Frankfurt). Nach dem Deployment die Adresse des Dienstes aufrufen: Die Webseite erscheint.
 2. **Aufwecken:** Im Gratis-Tarif schläft der Dienst nach 15 Minuten. Vor einem Test `…/health` aufrufen und auf `{"status":"ok"}` warten.
-3. **In Claude:** In den Einstellungen unter Konnektoren einen benutzerdefinierten Konnektor mit der Adresse `https://<dein-dienst>.onrender.com/mcp` hinzufügen (je nach Tarif verfügbar) und im Chat einschalten.
+3. **In Claude** (claude.ai oder Claude Desktop, VS Code wird dafür nicht gebraucht): Anpassen › Konnektoren, Plus, "Benutzerdefinierten Konnektor hinzufügen", Name vergeben und die Adresse `https://<dein-dienst>.onrender.com/mcp` eintragen. Das geht in allen Tarifen, im Gratis-Tarif mit einem Konnektor. Danach den Konnektor im Chat einschalten. Claude verbindet sich aus der Cloud von Anthropic, nicht von deinem Rechner.
+   *Alternative im Terminal oder in VS Code mit Claude Code:* `claude mcp add --transport http ki-datenkatalog https://<dein-dienst>.onrender.com/mcp`
 4. **Fragen stellen**, zum Beispiel: "Sind wir 2025 im Budget geblieben?" Das Prüfblatt mit zehn Fragen steht in [`docs/chat-pruefung.md`](docs/chat-pruefung.md).
 
 Der Server hat sechs Werkzeuge, alle nur lesend: `katalog_durchsuchen`, `karte_anzeigen`, `herkunft_der_zahl`, `wer_hilft`, `begriff_erklaeren`, `alle_auswertungen`. Er hat keine Zugangsdaten und keine Datenbank. Der Katalog ist öffentlich, deshalb ist die Prüfung des Host-Namens abgeschaltet (sonst würden Anfragen über die Render-Adresse abgelehnt).
