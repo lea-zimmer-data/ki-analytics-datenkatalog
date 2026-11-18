@@ -1,0 +1,15 @@
+# Render-Blueprint: ein Web-Dienst, der Webseite und MCP-Endpunkt gemeinsam ausliefert.
+# Gratis-Tarif in Frankfurt. Der Dienst schläft nach 15 Minuten ohne Aufruf und wacht beim
+# nächsten Aufruf auf (das dauert bis zu einer Minute).
+services:
+  - type: web
+    name: ki-datenkatalog
+    runtime: python
+    region: frankfurt
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn server.app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7

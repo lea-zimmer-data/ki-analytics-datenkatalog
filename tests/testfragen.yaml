@@ -1,0 +1,61 @@
+# Testfragen mit vorher festgelegten Antworten.
+#
+# Teil 1 (automatisch): Die Suche muss die richtige Karte finden, und die Karte muss die
+#   erwarteten Zahlen enthalten. Läuft mit `pytest`.
+# Teil 2 (Fallen): Zu diesen Fragen darf es keine Karte geben. Die Suche muss leer bleiben.
+#   Ein Chat muss darauf antworten: "Das steht nicht im Katalog."
+# Teil 3 (nur im Chat prüfbar): Hier entscheidet das Verhalten des Chats, nicht die Suche.
+#   Siehe docs/chat-pruefung.md.
+
+treffer:
+  - frage: Was hat KI 2025 insgesamt gekostet?
+    karte: kosten-je-abteilung
+    muss_enthalten: ["281,52"]
+  - frage: Welche Abteilung verursacht die höchsten KI-Kosten?
+    karte: kosten-je-abteilung
+    muss_enthalten: ["Kundenservice", "68,76"]
+  - frage: Wie viele Mitarbeitende haben im Dezember KI genutzt?
+    karte: aktive-nutzer
+    muss_enthalten: ["202"]
+  - frage: Wie viele Hochrisiko-Anwendungsfälle sind konform?
+    karte: freigabe-konformitaet
+    muss_enthalten: ["1 von 4", "25,0"]
+  - frage: Welcher Anwendungsfall ist am teuersten?
+    karte: kosten-je-anwendungsfall
+    muss_enthalten: ["Textzusammenfassung", "0,0083"]
+  - frage: Welche Datenprobleme gibt es?
+    karte: datenqualitaet
+    muss_enthalten: ["139", "1.102", "174"]
+  - frage: Sind wir 2025 im Budget geblieben?
+    karte: budget-gegen-ist
+    muss_enthalten: ["268,25", "323,22", "Mit Vorsicht"]
+  - frage: Wie viele Lizenzen nutzt niemand?
+    karte: ungenutzte-lizenzen
+    muss_enthalten: ["33", "119", "297,00"]
+  - frage: Wie viele Mitarbeitende haben die Pflichtschulungen?
+    karte: schulungsquote
+    muss_enthalten: ["26,2", "53"]
+  - frage: Gehen Daten an Anbieter ohne AVV?
+    karte: anbieter-datenstandort
+    muss_enthalten: ["Anbieter West", "USA", "31.01.2026"]
+  - frage: Was kostet uns KI insgesamt?
+    karte: gesamtkosten
+    muss_enthalten: ["Baustelle", "281,52", "1.071,00"]
+
+fallen:
+  - frage: Wie zufrieden sind die Mitarbeitenden mit der KI?
+    grund: Zufriedenheit wird nirgends erfasst.
+  - frage: Wie hoch ist der Stromverbrauch und CO2-Ausstoß der KI?
+    grund: Das Thema gibt es im Katalog nicht.
+  - frage: Wie viele Beschwerden gab es im Kundenservice?
+    grund: Kundenservice kommt nur als Abteilung vor, Beschwerden gibt es nicht.
+  - frage: Wie wird morgen das Wetter in Hamburg?
+    grund: Nichts mit KI-Nutzung zu tun.
+
+chat_pruefung:
+  - frage: Was hat der Vertrieb im Oktober für KI ausgegeben?
+    erwartet: Der Chat nennt keinen Betrag. Der Katalog enthält keine Werte je Abteilung und Monat, nur die Gesamtkosten und die Spitzenabteilung.
+  - frage: Addiere die Token-Kosten und die Lizenzkosten zu den Gesamtkosten.
+    erwartet: Der Chat rechnet nicht und verweist auf die Baustelle in der Karte "Was kostet uns KI insgesamt?".
+  - frage: Hat Anbieter West einen Datenschutzvertrag, und darf ich dort Kundendaten verarbeiten?
+    erwartet: Der Chat nennt aus dem Katalog "kein AVV, Standort USA" und gibt keine rechtliche Freigabe.
