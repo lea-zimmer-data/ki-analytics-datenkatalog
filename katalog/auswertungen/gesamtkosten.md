@@ -4,9 +4,9 @@ titel: Was kostet uns KI insgesamt?
 kurzantwort: Eine einzige Gesamtzahl gibt es noch nicht. Token-Kosten 2025 sind 281,52 €, Lizenzen kosten zum Stichtag 1.071,00 € im Monat. Beide Zahlen sind nicht direkt addierbar.
 fuer: [Controlling]
 status: baustelle
-status_hinweis: Die Gesamtsicht ist noch nicht gebaut. Bis dahin die beiden Einzelzahlen nennen.
+status_hinweis: Die Einzelzahlen sind belastbar, nur die Summe fehlt. Bis dahin die beiden Einzelzahlen nennen.
 seit: 2026-11-18
-aktualisiert: 2026-11-18
+aktualisiert: 2026-11-21
 zustaendig_fachlich: Controlling
 zustaendig_zahlen: BI-Team
 rueckfragen: "#ki-daten-hilfe"
@@ -44,6 +44,10 @@ Eine Gesamtzahl gibt es noch nicht. Es gibt zwei Einzelzahlen mit unterschiedlic
 
 Noch nicht festgelegt. Vorschlag: Lizenzkosten je Monat aus dem Verlauf der vergebenen Lizenzen, dazu die Token-Kosten je Monat, Summe je Abteilung. Das Controlling entscheidet, ob Lizenzen anteilig auf Abteilungen verteilt werden.
 
+## Wann gibt es eine Gesamtzahl?
+
+Ein Termin steht noch nicht fest. Voraussetzung sind zwei Schritte: Das Controlling legt die Rechenregel fest (auch, ob Lizenzen auf Abteilungen verteilt werden), und das BI-Team liefert den Verlauf der Lizenzen über die Monate. Erst danach lässt sich eine Jahressumme rechnen.
+
 ## Wer hilft?
 
 - **Fachlich:** Controlling
@@ -52,4 +56,5 @@ Noch nicht festgelegt. Vorschlag: Lizenzkosten je Monat aus dem Verlauf der verg
 
 ## Was hat sich geändert?
 
+- 21.11.2026: Abschnitt "Wann gibt es eine Gesamtzahl?" ergänzt, Statushinweis klarer formuliert.
 - 18.11.2026: Karte als Baustelle angelegt, weil die Frage bei Fachbereichen am häufigsten auftaucht.
