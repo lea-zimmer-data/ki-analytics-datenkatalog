@@ -6,7 +6,7 @@ fuer: [Controlling, Abteilungsleitung]
 status: mit-vorsicht
 status_hinweis: 6,54 € gehören zu Nutzern ohne bekannte Abteilung und stehen unter "Unbekannt".
 seit: 2026-11-12
-aktualisiert: 2026-11-18
+aktualisiert: 2026-11-21
 zustaendig_fachlich: Controlling (IT-Kostenstellen)
 zustaendig_zahlen: BI-Team
 rueckfragen: "#ki-daten-hilfe"
@@ -51,7 +51,9 @@ Die Token-Kosten der KI-Nutzung, aufgeteilt nach Abteilung und Monat. In den Bei
 
 Kosten je Anfrage = Eingabe-Token × Eingabepreis ÷ 1.000 + Ausgabe-Token × Ausgabepreis ÷ 1.000. Fehlgeschlagene Anfragen kosten nichts. Doppelt gelieferte Anfragen zählen einmal.
 
-**Achtung beim Summieren:** In der Monatstabelle ist jede Zeile auf zwei Stellen gerundet. Die Summe der Zeilen ergibt deshalb 281,49 €, die genauen Gesamtkosten sind 281,52 €. Für Gesamtsummen die genaue Zahl verwenden.
+**Achtung beim Summieren:** Im Bericht ist jede Zeile je Abteilung und Monat auf zwei Stellen gerundet. Die Summe der Zeilen ergibt deshalb 281,49 €, die genauen Gesamtkosten sind 281,52 €. Für Gesamtsummen die genaue Zahl verwenden.
+
+**Was der Katalog nicht enthält:** Die einzelnen Werte je Abteilung und Monat stehen im Bericht, nicht im Katalog. Der Katalog erklärt die Zahl, er liefert nicht jede Zeile. Einzelwerte, zum Beispiel Vertrieb im Oktober, liefert das BI-Team.
 
 ## Wer hilft?
 
@@ -61,5 +63,6 @@ Kosten je Anfrage = Eingabe-Token × Eingabepreis ÷ 1.000 + Ausgabe-Token × Au
 
 ## Was hat sich geändert?
 
+- 21.11.2026: Klargestellt, dass die Werte je Abteilung und Monat im Bericht stehen und nicht im Katalog.
 - 18.11.2026: Karte neu geschrieben, Zahlen mit dem Katalog-Test nachgerechnet.
 - 12.11.2026: Erste Fassung im Lakehouse-Projekt.
