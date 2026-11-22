@@ -114,8 +114,12 @@ def test_abzeichen_werden_nur_bei_erfuelltem_kriterium_vergeben():
     karte = katalog.karten()["gesamtkosten"]
     namen = [n for n, _ in karte.abzeichen(heute=date(2030, 1, 1))]
     assert "Aktuell" not in namen
-    assert "Lücke benannt" not in namen  # Baustelle, nicht "mit Vorsicht"
-    assert "Nachgerechnet" in namen
+    # Baustelle: keine fertige Zahl, deshalb nur die Einzelzahlen als nachgerechnet,
+    # kein "Vollständig beschrieben", dafür die offen genannte Lücke.
+    assert "Einzelzahlen nachgerechnet" in namen
+    assert "Nachgerechnet" not in namen
+    assert "Vollständig beschrieben" not in namen
+    assert "Lücke benannt" in namen
 
 
 # ---------- 3. Testfragen ----------
