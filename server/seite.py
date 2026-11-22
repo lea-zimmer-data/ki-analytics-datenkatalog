@@ -280,11 +280,15 @@ woher sie kommen, wie verlässlich sie sind und wer helfen kann. Er zeigt keine 
 In Claude öffnest du Anpassen › Konnektoren, klickst auf das Plus, wählst "Benutzerdefinierten Konnektor hinzufügen" und trägst die Adresse deines
 Servers ein, die auf <code>/mcp</code> endet. Das geht auch im Gratis-Tarif (dort mit einem Konnektor). Claude verbindet sich aus der Cloud von Anthropic, der Server muss also öffentlich erreichbar sein. Danach kannst du Fragen wie <i>"Was kostet uns KI pro Abteilung?"</i> stellen.</p>
 <p>Der Chat soll nur aus dem Katalog antworten, die Karte als Quelle nennen und bei Lücken <i>"Das steht nicht im Katalog."</i> sagen.
-Das haben wir mit Testfragen geprüft, darunter zwei Fallen. Die Testfragen stehen im Repository.</p></div>
+Das haben wir mit Testfragen geprüft, darunter vier Fallen. Die Testfragen und Ergebnisse stehen im Repository.</p></div>
 <div class="abschnitt"><h2>Was in der Praxis die Arbeit ist</h2>
 <p>Die Technik dahinter ist klein. Aufwendig ist, dass die Fachbereiche die Texte pflegen: Was bedeutet die Zahl, wer ist zuständig, wo ist eine Lücke.
 Der Katalog hilft nur, solange diese Texte aktuell bleiben.</p>
-<p><a href="{REPO}">Zum Repository</a></p></div>"""
+<p><a href="{REPO}">Zum Repository</a></p></div>
+<div class="abschnitt"><h2>Wer das gebaut hat</h2>
+<p><b>Lea Zimmer</b>, Hamburg. Ich helfe Fachbereichen, Zahlen zu verstehen und Daten selbst zu nutzen.
+Den Code hat Claude geschrieben. Die Fachfragen, die Regeln und die Entscheidung, was eine Zahl bedeutet, kamen von mir.</p>
+<p><a href="https://www.linkedin.com/in/leazimmer">Auf LinkedIn vernetzen</a></p></div>"""
     return seitenrahmen("Über diesen Katalog", inhalt)
 
 

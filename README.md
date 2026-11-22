@@ -87,6 +87,7 @@ render.yaml             Blueprint für Render
 ## Ehrliche Einordnung
 
 - **Der Chat ist ein Machbarkeitsnachweis, kein fertiges Produkt.** In einer Firma würde die BI oder IT den Anschluss einmal einrichten, der Server müsste dauerhaft laufen, und der Chat-Anbieter ist austauschbar.
+- **Die Websuche lässt sich im privaten Konto nicht verlässlich abschalten.** Im Test hat der Chat ohne Vorgabe zusätzlich im Web gesucht. Mit dem Zusatz "Antworte nur aus dem KI-Katalog" hat er nur den Katalog genutzt. In einem Unternehmen schaltet die Administration die Websuche ab, dann antwortet der Chat nur aus den angeschlossenen internen Quellen.
 - **Der Katalog liefert keine Live-Zahlen.** Er erklärt Zahlen. Die Werte stehen als Beispiel auf den Karten und stammen aus den Beispieldaten.
 - **Die Pflege der Texte ist die eigentliche Arbeit.** Wer erklärt, was eine Zahl bedeutet, wer aktuell hält und wer bei Lücken zuständig ist, entscheidet, ob ein Katalog nützt. Die Technik ist dagegen klein.
 - **Erfunden sind:** alle Daten, Anbieter, Verträge, Rollen und der Kanal `#ki-daten-hilfe`.
@@ -96,6 +97,16 @@ render.yaml             Blueprint für Render
 ## Entstehung
 
 Den Code hat Claude geschrieben. Die Fachfragen, die Regeln und die Entscheidung, was eine Zahl bedeutet, kamen von Lea Zimmer.
+
+## Über mich
+
+Ich bin Lea Zimmer aus Hamburg. Ich helfe Fachbereichen, Zahlen zu verstehen und Daten selbst zu nutzen. Dieser Katalog ist der dritte Teil einer Serie zu KI-Nutzung und -Kosten, mit denselben frei erfundenen Daten:
+
+1. [Snowflake und dbt](https://github.com/lea-zimmer-data/ki-nutzung-kosten-analytics)
+2. [Databricks Lakehouse](https://github.com/lea-zimmer-data/ki-nutzung-kosten-lakehouse)
+3. Dieser Datenkatalog
+
+Du erreichst mich auf [LinkedIn](https://www.linkedin.com/in/leazimmer).
 
 ## Lizenz
 
