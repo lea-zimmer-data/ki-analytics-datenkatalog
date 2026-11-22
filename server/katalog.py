@@ -82,16 +82,24 @@ class Karte:
         heute = heute or date.today()
         m = self.meta
         liste = []
+        baustelle = m["status"] == "baustelle"
         if m.get("werte"):
-            liste.append(("Nachgerechnet", "Alle Zahlen dieser Karte werden von einem Test aus den Daten nachgerechnet."))
+            if baustelle:
+                # Bei einer Baustelle gibt es keine fertige Zahl. Nachgerechnet sind nur die Einzelzahlen.
+                liste.append(("Einzelzahlen nachgerechnet", "Die Einzelzahlen dieser Karte werden von einem Test nachgerechnet. Eine Gesamtzahl gibt es noch nicht."))
+            else:
+                liste.append(("Nachgerechnet", "Alle Zahlen dieser Karte werden von einem Test aus den Daten nachgerechnet."))
         if m.get("zustaendig_fachlich") and m.get("zustaendig_zahlen"):
             liste.append(("Ansprechpersonen benannt", "Fachlich und für die Berechnung ist eine Rolle benannt."))
-        if all(a in self.abschnitte for a in ABSCHNITTE):
+        # Bei einer Baustelle wäre "Vollständig beschrieben" irreführend: Die Karte ist nicht nutzbar.
+        if not baustelle and all(a in self.abschnitte for a in ABSCHNITTE):
             liste.append(("Vollständig beschrieben", "Alle fünf Abschnitte sind ausgefüllt."))
         if (heute - m["aktualisiert"]).days <= 30:
             liste.append(("Aktuell", "In den letzten 30 Tagen aktualisiert."))
         if m["status"] == "mit-vorsicht":
             liste.append(("Lücke benannt", "Die bekannte Einschränkung steht offen auf der Karte."))
+        elif baustelle:
+            liste.append(("Lücke benannt", "Die Karte sagt offen, was fehlt."))
         return liste
 
     def volltext(self) -> str:
