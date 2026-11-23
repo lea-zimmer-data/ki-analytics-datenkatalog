@@ -1,6 +1,6 @@
 # KI-Datenkatalog für Fachbereiche
 
-> **Prototyp, kein fertiges Produkt.** Dieser Katalog ist ein Grundgerüst mit erfundenen Beispieldaten. Er zeigt, wie ein Chat aus einem Katalog antworten kann, und muss für den echten Einsatz erweitert und an die eigenen Daten, Rollen und Regeln angepasst werden.
+**Prototyp, kein fertiges Produkt.** Dieser Katalog ist ein Grundgerüst mit erfundenen Beispieldaten. Er zeigt, wie ein Chat aus einem Katalog antworten kann, und muss für den echten Einsatz erweitert und an die eigenen Daten, Rollen und Regeln angepasst werden.
 
 **Woher kommt diese Zahl? Der Katalog sagt es, und ein Chat kann ihn befragen.**
 
