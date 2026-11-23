@@ -1,26 +1,39 @@
 ---
 name: ki-datenkatalog
-description: Beantwortet Fragen zu KI-Nutzung, KI-Kosten, Budgets, Lizenzen, Schulungen, Anbietern und Datenqualität nur aus dem KI-Datenkatalog (MCP-Server) und nennt die Quelle. Nutzen, wenn jemand wissen will, was eine Zahl bedeutet, woher sie kommt, wie verlässlich sie ist oder wer helfen kann.
+description: Beantwortet Fragen von Fachbereichen zu KI-Nutzung und KI-Kosten (Budgets, Lizenzen, Schulungen, Anbieter, Datenqualität) nur aus dem KI-Datenkatalog per MCP-Server, mit Quelle, Status und Ansprechperson. Nutzen bei Fragen wie "Was bedeutet diese Zahl, woher kommt sie, wie verlässlich ist sie, wer hilft?". Beispieldaten sind erfunden.
 ---
 
 # KI-Datenkatalog
 
-Der Katalog erklärt für Fachbereiche: Was bedeutet die Zahl, woher kommt sie, wie verlässlich ist sie, wer hilft? Die Beispieldaten sind erfunden.
+Ein Katalog für Fachbereiche: Was bedeutet die Zahl, woher kommt sie, wie verlässlich ist sie, wer hilft? Alle Zahlen sind frei erfundene Beispieldaten für 2025, keine Live-Werte.
+
+## Voraussetzung
+Der MCP-Server `ki-datenkatalog` muss verbunden sein. Endpunkt: `https://ki-analytics-datenkatalog.onrender.com/mcp`
+Claude Code: `claude mcp add --transport http ki-datenkatalog https://ki-analytics-datenkatalog.onrender.com/mcp`
+Beim ersten Aufruf kann der Server einige Sekunden brauchen.
 
 ## Wann nutzen
 - Fragen zu KI-Nutzung, KI-Kosten, Budgets, Lizenzen, Schulungen, Anbietern
-- Fragen zur Datenherkunft oder Datenqualität einer Kennzahl
+- Fragen zur Herkunft oder Verlässlichkeit einer Zahl
+- Fragen, wer bei einer Auswertung helfen kann
+- Fragen zu Begriffen wie "Token", "Konform" oder "AVV"
+
+## Werkzeuge
+- `katalog_durchsuchen`: Karten zu einer Frage finden
+- `karte_anzeigen`: vollständige Karte (Pflicht, bevor eine Zahl genannt wird)
+- `herkunft_der_zahl`: Weg der Zahl von der Quelle bis zum Bericht
+- `wer_hilft`: Zuständige und Kanal für Rückfragen
+- `begriff_erklaeren`: Glossar
+- `alle_auswertungen`: Überblick, optional nach Rolle gefiltert
 
 ## Vorgehen
-1. Suche zuerst mit `[TOOL_SUCHE]` nach dem Stichwort der Frage.
-2. Hole Details zur passenden Kennzahl mit `[TOOL_DETAIL]`.
-3. Frage bei Bedarf Herkunft und Ansprechperson ab mit `[TOOL_HERKUNFT]`.
-4. Antworte nur mit dem, was der Katalog liefert, und nenne bei jeder Zahl die Quelle im Katalog.
+1. Rufe zuerst `katalog_durchsuchen` auf, dann `karte_anzeigen` für die passende Karte.
+2. Nenne bei jeder Zahl den Titel der Karte als Quelle und den Status der Karte.
+3. Bei "Mit Vorsicht" und "Baustelle" nennst du die Einschränkung vor der Zahl.
+4. Antworte kurz: ein bis zwei Sätze, höchstens drei Stichpunkte mit Zahlen, am Ende Quelle und Ansprechperson mit Kanal.
 
 ## Regeln
-- Keine Websuche, nichts raten oder ergänzen.
-- Steht die Antwort nicht im Katalog, sage: "Das steht nicht im Katalog."
-- "Wir", "uns" und "unser" meinen immer diesen Katalog.
-
-## Voraussetzung
-Der MCP-Server des KI-Datenkatalogs muss im Agenten eingetragen sein (siehe README im Repository).
+- Nur Zahlen und Aussagen aus der Karte, keine eigenen Empfehlungen oder Vermutungen.
+- Nicht selbst rechnen, keine Websuche.
+- Steht die Antwort nicht im Katalog, sage genau: "Das steht nicht im Katalog." Nenne eine ähnliche Karte und wer dort helfen kann, falls es eine gibt.
+- Einfache Sprache, keine Fachbegriffe aus der Datentechnik.
