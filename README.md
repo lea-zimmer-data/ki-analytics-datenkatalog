@@ -1,5 +1,7 @@
 # KI-Datenkatalog für Fachbereiche
 
+> **Prototyp, kein fertiges Produkt.** Dieser Katalog ist ein Grundgerüst mit erfundenen Beispieldaten. Er zeigt, wie ein Chat aus einem Katalog antworten kann, und muss für den echten Einsatz erweitert und an die eigenen Daten, Rollen und Regeln angepasst werden.
+
 **Woher kommt diese Zahl? Der Katalog sagt es, und ein Chat kann ihn befragen.**
 
 Ein Beispielkatalog zu KI-Nutzung und KI-Kosten, geschrieben für Fachbereiche und nicht für Informatiker. Zu jeder Zahl steht: was sie bedeutet, wie sie berechnet wird, woher sie kommt, ob man sich darauf verlassen darf und wer helfen kann.
@@ -86,6 +88,7 @@ render.yaml             Blueprint für Render
 
 ## Ehrliche Einordnung
 
+- **Dies ist ein Prototyp.** Der Katalog ist ein Grundgerüst: Karten, Texte, Rollen und Regeln müssen für den eigenen Einsatz erweitert und angepasst werden. Der Chat ist ein Machbarkeitsnachweis, kein fertiges Produkt. In einer Firma würde die BI oder IT den Anschluss einmal einrichten, der Server müsste dauerhaft laufen, und der Chat-Anbieter ist austauschbar.
 - **Der Chat ist ein Machbarkeitsnachweis, kein fertiges Produkt.** In einer Firma würde die BI oder IT den Anschluss einmal einrichten, der Server müsste dauerhaft laufen, und der Chat-Anbieter ist austauschbar.
 - **Die Websuche lässt sich im privaten Konto nicht verlässlich abschalten.** Im Test hat der Chat ohne Vorgabe zusätzlich im Web gesucht. Mit dem Zusatz "Antworte nur aus dem KI-Katalog" hat er nur den Katalog genutzt. In einem Unternehmen schaltet die Administration die Websuche ab, dann antwortet der Chat nur aus den angeschlossenen internen Quellen.
 - **Der Katalog liefert keine Live-Zahlen.** Er erklärt Zahlen. Die Werte stehen als Beispiel auf den Karten und stammen aus den Beispieldaten.
